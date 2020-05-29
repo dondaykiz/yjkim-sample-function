@@ -106,15 +106,6 @@
                     <groupId>com.microsoft.azure</groupId>
                     <artifactId>azure-functions-maven-plugin</artifactId>
                     <version>${azure.functions.maven.plugin.version}</version>
-                    <configuration>
-                        <authentication>
-                            <serverId>azure-auth</serverId>
-                        </authentication>
-                        <resourceGroup>${functionResourceGroup}</resourceGroup>
-                        <appName>${functionAppName}</appName>
-                        <region>${functionAppRegion}</region>
-                        <deploymentType>war</deploymentType>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -139,6 +130,9 @@
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-functions-maven-plugin</artifactId>
                 <configuration>
+                    <authentication>
+                        <serverId>azure-auth</serverId>
+                    </authentication>
                     <resourceGroup>${functionResourceGroup}</resourceGroup>
                     <appName>${functionAppName}</appName>
                     <region>${functionAppRegion}</region>
